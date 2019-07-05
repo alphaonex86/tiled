@@ -13,13 +13,21 @@ DynamicLibrary {
 
     cpp.cxxLanguageVersion: "c++14"
     cpp.visibility: "minimal"
-    cpp.defines: [
-        "TILED_LIBRARY",
-        "QT_NO_CAST_FROM_ASCII",
-        "QT_NO_CAST_TO_ASCII",
-        "QT_NO_URL_CAST_FROM_STRING",
-        "_USE_MATH_DEFINES"
-    ]
+    cpp.defines: {
+        var defs = [
+            "TILED_LIBRARY",
+            "QT_NO_CAST_FROM_ASCII",
+            "QT_NO_CAST_TO_ASCII",
+            "QT_NO_URL_CAST_FROM_STRING",
+            "_USE_MATH_DEFINES",
+            "TILED_ZSTD_SUPPORT"
+        ]
+
+        if(project.enableZstd)
+            defs.push("TILED_ZSTD_SUPPORT");
+
+        return defs;
+    }
 
     Properties {
         condition: qbs.targetOS.contains("macos")

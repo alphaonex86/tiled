@@ -49,7 +49,7 @@ matrix:
     - qbs --version
     - qbs setup-toolchains --detect
     - qbs config defaultProfile gcc
-    - qbs install --install-root Tiled config:release qbs.installPrefix:/usr projects.Tiled.version:$TILED_VERSION
+    - qbs install --install-root Tiled config:release qbs.installPrefix:/usr projects.Tiled.version:$TILED_VERSION projects.Tiled.enableZstd:true
     - cp LICENSE* COPYING *md Tiled/
     after_success:
     - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
