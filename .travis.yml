@@ -123,6 +123,7 @@ matrix:
       homebrew:
         packages:
           - zstd
+        update: true
     before_install:
     - curl -L https://raw.githubusercontent.com/benlau/qtci/master/recipes/install-qt
       --output install-qt
