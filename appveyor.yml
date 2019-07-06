@@ -46,6 +46,9 @@ build_script:
   - git checkout 83b51e9f886be7c2a4d477b6e7bc6db831791d8d # 1.4.0
   - set CC=gcc
   - mingw32-make
+  - ls -l
+  - ls -l dll
+  - make
   - cd ../../
   - qbs --version
   - qbs setup-toolchains --detect
