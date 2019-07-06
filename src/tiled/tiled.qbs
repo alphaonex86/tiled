@@ -17,7 +17,10 @@ QtGuiApplication {
 
     property bool qtcRunnable: true
 
-    cpp.includePaths: ["."]
+    cpp.includePaths: [
+                ".",
+                "zstd/lib"
+            ]
     cpp.useRPaths: project.useRPaths
     cpp.rpaths: {
         if (qbs.targetOS.contains("darwin"))

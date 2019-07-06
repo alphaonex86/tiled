@@ -142,7 +142,10 @@ DynamicLibrary {
             submodules: ["gui"]
         }
 
-        cpp.includePaths: "."
+        cpp.includePaths: [
+            ".",
+            "zstd/lib"
+        ]
     }
 
     Group {
