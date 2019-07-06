@@ -29,6 +29,8 @@ DynamicLibrary {
         return defs;
     }
 
+    cpp.includePaths: [ "../../zstd/lib" ]
+
     Properties {
         condition: qbs.targetOS.contains("macos")
         cpp.cxxFlags: ["-Wno-unknown-pragmas"]

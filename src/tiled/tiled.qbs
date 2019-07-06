@@ -21,6 +21,7 @@ QtGuiApplication {
                 ".",
                 "../../zstd/lib"
             ]
+
     cpp.useRPaths: project.useRPaths
     cpp.rpaths: {
         if (qbs.targetOS.contains("darwin"))
