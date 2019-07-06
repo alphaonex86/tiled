@@ -19,7 +19,7 @@ QtGuiApplication {
 
     cpp.includePaths: [
                 ".",
-                "zstd/lib"
+                "../../zstd/lib"
             ]
     cpp.useRPaths: project.useRPaths
     cpp.rpaths: {

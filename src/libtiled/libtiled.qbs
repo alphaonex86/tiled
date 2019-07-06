@@ -144,7 +144,7 @@ DynamicLibrary {
 
         cpp.includePaths: [
             ".",
-            "zstd/lib"
+            "../../zstd/lib"
         ]
     }
 
