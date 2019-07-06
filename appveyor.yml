@@ -43,7 +43,8 @@ build_script:
   - if defined TILED_SNAPSHOT echo Building Tiled snapshot %TILED_VERSION%... (from %COMMITNOW%)
   - git clone https://github.com/facebook/zstd.git
   - cd zstd/lib
-  - CC=gcc mingw32-make
+  - set CC=gcc
+  - mingw32-make
   - cd ../../
   - qbs --version
   - qbs setup-toolchains --detect
