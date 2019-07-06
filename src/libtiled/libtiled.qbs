@@ -23,7 +23,7 @@ DynamicLibrary {
             "TILED_ZSTD_SUPPORT"
         ]
 
-        if(project.enableZstd)
+        if (project.enableZstd)
             defs.push("TILED_ZSTD_SUPPORT");
 
         return defs;

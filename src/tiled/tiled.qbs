@@ -44,7 +44,7 @@ QtGuiApplication {
         if (project.snapshot)
             defs.push("TILED_SNAPSHOT");
 
-        if(project.enableZstd)
+        if (project.enableZstd)
             defs.push("TILED_ZSTD_SUPPORT");
 
         return defs;
