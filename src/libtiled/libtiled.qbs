@@ -13,8 +13,7 @@ DynamicLibrary {
 
     Properties {
         condition: qbs.toolchain.contains("mingw") && project.enableZstd
-        cpp.staticLibraries: ["zstd", "libzstd", "../../zstd/lib/libzstd.lib"]
-        cpp.libraryPaths: ["../../zstd/lib"]
+        cpp.staticLibraries: ["../../zstd/lib/libzstd.lib"]
     }
 
     cpp.cxxLanguageVersion: "c++14"
