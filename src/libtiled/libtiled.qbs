@@ -11,6 +11,11 @@ DynamicLibrary {
         cpp.dynamicLibraries: base.concat(["z"])
     }
 
+    Properties {
+        condition: qbs.toolchain.contains("mingw")
+        cpp.dynamicLibraries: base.concat(["../../zstd/lib/libzstd.dll"])
+    }
+
     cpp.cxxLanguageVersion: "c++14"
     cpp.visibility: "minimal"
     cpp.defines: {
