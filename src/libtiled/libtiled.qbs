@@ -14,7 +14,7 @@ DynamicLibrary {
     Properties {
         condition: qbs.toolchain.contains("mingw") && project.enableZstd
         cpp.staticLibraries: ["libzstd"]
-        cpp.libraryPaths: ["../../zstd/lib"]
+        cpp.libraryPaths: ["../../zstd/lib/dll"]
     }
 
     cpp.cxxLanguageVersion: "c++14"
@@ -45,7 +45,7 @@ DynamicLibrary {
         Properties {
             condition: qbs.targetOS.contains("macos") && project.enableZstd
             cpp.staticLibraries: ["libzstd"]
-            cpp.libraryPaths: ["../../zstd/lib/dll"]
+            cpp.libraryPaths: ["../../zstd/lib"]
         }
 
     Properties {
