@@ -42,11 +42,11 @@ DynamicLibrary {
         cpp.cxxFlags: ["-Wno-unknown-pragmas"]
     }
 
-        Properties {
-            condition: qbs.targetOS.contains("macos") && project.enableZstd
-            cpp.staticLibraries: ["zstd"]
-            cpp.libraryPaths: ["../../zstd/lib"]
-        }
+    Properties {
+        condition: qbs.targetOS.contains("macos") && project.enableZstd
+        cpp.staticLibraries: ["zstd"]
+        cpp.libraryPaths: ["../../zstd/lib"]
+    }
 
     Properties {
         condition: qbs.targetOS.contains("darwin")

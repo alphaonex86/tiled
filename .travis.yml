@@ -137,7 +137,6 @@ matrix:
     - git clone https://github.com/facebook/zstd.git
     - cd zstd/lib
     - make
-    - ls -R
     - cd ../../
     script:
     - qbs --version
