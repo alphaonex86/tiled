@@ -121,6 +121,8 @@ matrix:
     after_script:
     - cppcheck --enable=all -q -Isrc/libtiled `git ls-files src/\*.cpp`
   - os: osx
+    env:
+      - MAKEFLAGS=-j2
     before_install:
     - curl -L https://raw.githubusercontent.com/benlau/qtci/master/recipes/install-qt
       --output install-qt
