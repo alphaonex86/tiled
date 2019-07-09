@@ -44,7 +44,7 @@ DynamicLibrary {
 
         Properties {
             condition: qbs.targetOS.contains("macos") && project.enableZstd
-            cpp.staticLibraries: ["libzstd"]
+            cpp.staticLibraries: ["zstd"]
             cpp.libraryPaths: ["../../zstd/lib"]
         }
 
