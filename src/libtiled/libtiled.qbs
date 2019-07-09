@@ -40,6 +40,8 @@ DynamicLibrary {
     Properties {
         condition: qbs.targetOS.contains("macos")
         cpp.cxxFlags: ["-Wno-unknown-pragmas"]
+        cpp.staticLibraries: ["libzstd"]
+        cpp.libraryPaths: ["../../zstd/lib/dll"]
     }
 
     Properties {
